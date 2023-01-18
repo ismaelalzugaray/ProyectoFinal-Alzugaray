@@ -1,0 +1,33 @@
+.detailCard{
+    background-color: rgb(195, 193, 193);
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.detailTitle{
+    font-size: 40px;
+    text-align: center;
+}
+
+.detailImg{
+    text-align: center;
+}
+
+.detailImg img{
+    width: 700px;
+    height: 600px;
+}
+
+.detailInfo{
+    text-align: center;
+}
+
+.detailInfo h4{
+    font-size: 50px;
+}
+
+.detailInfo p{
+    font-size: 50px;
+}
