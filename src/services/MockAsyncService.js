@@ -366,7 +366,7 @@ function getItems(){
     return new Promise ((resolve, reject) =>{
         setTimeout(() =>{
             resolve(products)
-        },2000)
+        },1000)
     })
 }
 
@@ -380,7 +380,7 @@ export function getSingleItem (itemid) {
         resolve(itemRequested)
         else
           reject("Item no encontrado en la base de datos")
-    },2000)
+    },1000)
 })
 }
 
@@ -390,7 +390,7 @@ export function getItemByCategory (categoryid) {
   return new Promise ((resolve, reject) =>{
     setTimeout(() =>{
         resolve(itemcategory)
-    },2000)
+    },1000)
 })
 }
        
