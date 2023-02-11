@@ -12,8 +12,8 @@ function NavBar() {
                 <div className="container-fluid">
 
                     <div className="container-fluid logoDiv">
-                        <Link to="/" className="logo">
-                            <h3>
+                        <Link to="/">
+                            <h3 className="logo">
                                 KRETZCOMMERCE
                             </h3>
                         </Link>
