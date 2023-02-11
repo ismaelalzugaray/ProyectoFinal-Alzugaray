@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Button from "../Button/Button"
+import "./ItemCount.css"
 
 function ItemCount ({onAddToCart, stock}){
 
@@ -17,14 +19,14 @@ function ItemCount ({onAddToCart, stock}){
     }
 
     return (
-        <div>
-            <div>
-                <button onClick={handleOnSubstract}>-</button>
+        <div classaName="iCountContainer">
+            <div className="countContainer">
+                <Button Text="-" Evt={handleOnSubstract}/>
                 <p>{count}</p>
-                <button onClick={handleOnADdd}>+</button>
+                <Button Text="+" Evt={handleOnADdd}/>
             </div>
             <div>
-                <button onClick={() => onAddToCart(count)}>agregar al carrito</button>
+            <Button  Text="Añadir al carrito" Evt={() => onAddToCart(count)}></Button>
             </div>
         </div>
     )

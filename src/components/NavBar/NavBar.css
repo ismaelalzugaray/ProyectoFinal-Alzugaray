@@ -1,34 +1,41 @@
-.menuBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header{
     border-bottom: 1px solid black;
-    background-color: black;
-    width: 100%;
+    background: linear-gradient(90deg, rgba(0,120,150,1) 0%, rgba(140,64,199,1) 48%, rgba(255,3,139,1) 100%);
 }
 
-.menuBar a{
-    color: white;
+.logo{
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
-
-.menuList{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header p{
     text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-style: none;
     
 }
 
-.menuList li {
-    margin: 0px 5px;
-    list-style-type: none;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
+.header p:hover{
+    color: rgb(255, 255, 255)
 }
 
-.menuList a{
+
+
+
+.navbar-nav{
+    margin-right: 60px;
+    gap: 10px;
+}
+
+.nav-item{
+    transition: 0.3s;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255)
+}
+
+.navbar-nav li:hover{
+    transform: scale(1.1);
+}
+
+.navbar-toggler{
+    margin-left: 150px;
 }

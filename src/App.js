@@ -13,7 +13,6 @@ function App () {
 
   return (
     <CartContextProvider>
-      <button onClick ={exportData}>Export Data</button>
       <BrowserRouter>
 
         <NavBar/>

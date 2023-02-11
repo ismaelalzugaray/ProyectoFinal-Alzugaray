@@ -1,10 +1,9 @@
 import React from "react";
 import Items from "../Items/Items";
-import FlexWrapper from "../flexWrapper/FlexWrapper";
 
 function ItemList(props) {
   return (
-    <FlexWrapper>
+    <div className="row text-center justify-content-evenly mt-5">
       {props.products.map((item) => (
         <Items
           key={item.id}
@@ -15,7 +14,8 @@ function ItemList(props) {
           description={item.description}
         />
       ))}
-    </FlexWrapper>
+    </div>
+    
   );
 }
 

@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { getItemByCategory } from "../../services/FireBase";
 import ItemList from "../ItemList/ItemList";
 import {getItems} from "../../services/FireBase"
+import Loader from "../Loader/Loader";
+import "./ItemListContainer.css"
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -28,9 +30,13 @@ function ItemListContainer() {
     <>
       <div>
         {isLoading ? (
-          <h1>cargando productos</h1>
+          <Loader/>
         ) : (
+          <>
+          <div className="welcome"><h1>¡Bienvenidos a KretzCommerce!</h1></div>
           <ItemList products={products} />
+          </>
+          
         )}
       </div>
     </>

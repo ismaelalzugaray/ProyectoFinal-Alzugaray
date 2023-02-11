@@ -1,10 +1,15 @@
 import { useState } from "react"
+import "./CartForm.css"
+import Button from "../Button/Button"
+
 
 function InputForm(props) {
+    
     return (
         <div>
-            <label>{props.label}</label>
-            <input 
+            <label className="formLabel">{props.label}</label>
+            <input
+                className="formInput"
                 type="text" 
                 value={props.value}
                 name={props.name}
@@ -16,9 +21,9 @@ function InputForm(props) {
 
 export default function CartForm(props){
     const [userData, setUserData] = useState({
-        name: "",
-        email: "",
-        phone: "",
+        Nombre: "",
+        Email: "",
+        Telefono: "",
     })
 
 
@@ -33,9 +38,9 @@ function onInputChange(evt){
 
 function clearData(){
     setUserData({
-        name: "",
-        email: "",
-        phone: ""
+        Nombre: "",
+        Email: "",
+        Telefono: ""
     })
 }
 
@@ -46,9 +51,10 @@ function onSubmit(evt){
 
 let arrayUserData = Object.keys(userData)
 
+
 return (
     <form onSubmit={onSubmit}>
-        <h1>Ingresa tus datos para finalizar la compra</h1>
+        <h1 className="formTitle">Ingresa tus datos para finalizar tu compra</h1>
         {
             arrayUserData.map(field => (
                 <InputForm 
@@ -59,19 +65,10 @@ return (
                 />
             ))
         }
-        <button
-        disable={
-            !(
-                userData.name !== "" &&
-                userData.phone !== "" &&
-                userData.email !== ""
-            )
-        }
-        type="submit"
-        >
-            Crear Orden
-        </button>
-        <button onClick={clearData}>Limpiar Campos</button>
+        <div className="buttonContainer">
+            <Button Text="Finalizar Compra" Evt={onSubmit} Disabled={!(userData.Nombre !== "" &&userData.Telefono !== "" && userData.Email !== "")}></Button>
+            <Button Text="Limpiar Formulario" Evt={clearData}></Button>
+        </div>
     </form>
 )
 }

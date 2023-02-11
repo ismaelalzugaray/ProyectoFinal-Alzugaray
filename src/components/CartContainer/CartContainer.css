@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+
+    
+
+.tableContainer table{
+    margin: 40px auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 10px;
+}
+
+
+thead{
+    background-color: rgba(0, 120, 150, 0.541);
+}
+
+
+th, td{
+    width: 25%;
+    font-size: 17px;
+    padding: 15px;
+}
+
+.buttonTd{
+    font-size: 15px;
+}
+
+.tableContainer p{
+    margin-top: 40px;
+    font-size: 20px;
+
+}
+
+.tableContainer span{
+    font-weight: bold;
+}
+
+.noProducts{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

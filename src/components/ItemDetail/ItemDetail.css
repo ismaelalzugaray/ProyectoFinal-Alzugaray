@@ -1,33 +1,29 @@
-.detailCard{
-    background-color: rgb(195, 193, 193);
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px;
+.divContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    width:  80%;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.detailTitle{
-    font-size: 40px;
+.divImg img{
+    width: 600px;
+    height: 400px;
+    margin-left: 30px;
+}
+
+.divDetail{
+    padding: 30px;
     text-align: center;
 }
 
-.detailImg{
-    text-align: center;
+.divDetail h3{
+    font-weight: bold;
+    font-style: italic;
 }
 
-.detailImg img{
-    width: 700px;
-    height: 600px;
-}
-
-.detailInfo{
-    text-align: center;
-}
-
-.detailInfo h4{
-    font-size: 50px;
-}
-
-.detailInfo p{
-    font-size: 50px;
+.divDetail span{
+    font-weight: bold;
 }

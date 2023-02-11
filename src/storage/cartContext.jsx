@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import swal from "sweetalert";
 
 export const cartContext = createContext()
 
@@ -9,27 +10,29 @@ export function CartContextProvider (props) {
     function addItem (item){
         const isInCart = cart.some(itemInCart => itemInCart.id === item.id)
         if (isInCart){
-            let newCart =[...cart];
-            let index = cart.findIndex(itemInCart => itemInCart.id === item.id)
+            let newCart = cart
+            let index = newCart.findIndex(obj => item.id  === item.id)
+            newCart[index].count += item.count
+            setCart([...newCart])
         }else{
             setCart([...cart, item])
         }
+
+        swal("Producto/s agregados al carrito!",`${item.title} x ${item.count} unidades`);
     }
 
     function removeItem(itemId){
+      let newCart = cart.filter(item => item.id !== itemId)
     
+      setCart([...newCart])
+      
     }
 
     function clearCart(){
         let emptyCart = []
-        setCart([emptyCart])
+        setCart([...emptyCart])
     }
 
-    function buyCart(){
-        ///aca iria un sweet alert///
-        let emptyCart = []
-        setCart([emptyCart])
-    }
 
     function getTotalItems() {
         let total = 0

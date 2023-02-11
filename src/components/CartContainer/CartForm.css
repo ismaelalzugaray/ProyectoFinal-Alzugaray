@@ -1,0 +1,32 @@
+form{
+    width: 50%;
+    margin: 40px auto;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.formTitle{
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.formLabel{
+    display: block;
+    font-size: 20px;
+}
+
+.formInput{
+    margin: 15px 0;
+    transition: 0.5s;
+}
+
+.formInput:focus{
+    transform: scale(1.1);
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

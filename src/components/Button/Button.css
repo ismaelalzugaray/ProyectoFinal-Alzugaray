@@ -1,0 +1,13 @@
+.genButton{
+    background-color: rgba(0,120,150,1);
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.5s;
+    color: white;
+    font-weight: bold;
+}
+
+.genButton:hover{
+    transform: scale(1.1);
+    background-color: rgba(140,64,199,1);
+}
